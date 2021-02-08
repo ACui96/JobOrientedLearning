@@ -60,7 +60,9 @@ public class A4ReverseList {
     }
 
     private static ListNode recur(ListNode cur, ListNode pre) {
-        if(cur==null) return pre;
+        if(cur==null) {
+            return pre;
+        }
         ListNode res = recur(cur.next, cur);
         cur.next = pre;
         return res;
