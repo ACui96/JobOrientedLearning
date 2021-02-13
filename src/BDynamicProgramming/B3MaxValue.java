@@ -49,6 +49,11 @@ public class B3MaxValue {
         return grid[m - 1][n - 1];
     }
 
+    /**
+     * 为减少冗余判断，先初始化第一行和第一列的值
+     * @param grid
+     * @return
+     */
     public static int solution2(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         for (int j = 1; j < n; j++) {
