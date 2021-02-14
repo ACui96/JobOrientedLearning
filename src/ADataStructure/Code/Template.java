@@ -1,5 +1,8 @@
 package ADataStructure.Code;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @ClassName A0ReplaceSpace
  * @Description
