@@ -1,7 +1,12 @@
-# LeetCode图解算法数据结构eBook的可执行代码
+# Leetcode刷题【按tag】
 
-[图解算法数据结构](https://leetcode-cn.com/leetbook/detail/illustration-of-algorithm/)
+## 1、滑动窗口
 
-每天更新一道题，编写算法和测试。
-目前进度：
-![img.png](img/img.png)
+### 刷题心得
+
+- 1、找到固定窗口，定义左右边界
+- 2、找到限制条件
+- 3、右边界主动右移，左边界被迫右移
+
+
+

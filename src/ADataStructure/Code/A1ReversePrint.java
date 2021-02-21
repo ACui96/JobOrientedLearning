@@ -3,6 +3,7 @@ package ADataStructure.Code;
 import ADataStructure.A2LinkedList.ListNode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 /**
@@ -14,7 +15,7 @@ import java.util.LinkedList;
  * @Version 1.0
  **/
 public class A1ReversePrint {
-    static ArrayList<Integer> tmp = new ArrayList<>();
+
     public static void main(String[] args) {
         // 实例化节点
         ListNode n1 = new ListNode(0);// 节点 head
@@ -34,9 +35,13 @@ public class A1ReversePrint {
         for (int i : ints) {
             System.out.println(i);
         }
+
+        int[] a = new int[]{1, 2, 3};
+        System.out.println(Arrays.stream(a).sum());
     }
 
     //方法1： 递归
+    static ArrayList<Integer> tmp = new ArrayList<>();
     public static int[] reversePrint(ListNode head) {
         recur(head);
         int[] res = new int[tmp.size()];
