@@ -2,3 +2,5 @@
 out/
 target/
 .idea/
+/src/leetcode/editor/cn/doc/
+/src/leetcode/editor/cn/all.json
