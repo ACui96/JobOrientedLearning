@@ -37,6 +37,8 @@ package leetcode.editor.cn;
 
 //种花问题
 
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -46,19 +48,27 @@ public class P605_CanPlaceFlowers{
 	 	 //测试代码
 	 	 Solution solution = new P605_CanPlaceFlowers().new Solution();
          boolean b = solution.canPlaceFlowers(new int[]{1, 0, 0, 0, 1}, 1);
+
          System.out.println(b);
-         List<Double> sums = new ArrayList<>();
-         Collections.max(sums);
 	 }
     //力扣代码
 	//leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean canPlaceFlowers(int[] flowerbed, int n) {
             int len = flowerbed.length;
-            for (int i = 0; i < len; i++) {
-
+            int cnt = 0;
+            for (int i = 0; i < len && cnt < n; i++) {
+                if (flowerbed[i] == 1) {
+                    continue;
+                }
+                int pre = i == 0 ? 0 : flowerbed[i - 1];
+                int next = i == len - 1 ? 0 : flowerbed[i + 1];
+                if (pre == 0 && next == 0) {
+                    cnt++;
+                    flowerbed[i] = 1;
+                }
             }
-            return true;
+            return cnt >= n;
         }
 }
 //leetcode submit region end(Prohibit modification and deletion)
