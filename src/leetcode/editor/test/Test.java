@@ -1,8 +1,6 @@
 package leetcode.editor.test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 public class Test {
@@ -45,22 +43,29 @@ public class Test {
     }
 
     public static void main(String[] args) {
-//        int[] nums = {1, 2, 3};
-//        Test solution = new Test();
-//        List<List<Integer>> lists = solution.permute(nums);
-//        System.out.println(lists);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(1, 1);
+        map.put(3, 3);
+        map.put(2, 2);
+        map.put(4, 4);
+        //{1=1, 2=2, 3=3, 4=4}
+        System.out.println(map);
 
-        boolean[][] g = new boolean[3][3];
-        for(int i = 0; i < 3; ++i) {
-            Arrays.fill(g[i], true);
-        }
-        for (boolean[] i : g) {
-            for (boolean b : i) {
-                System.out.println(b);
-            }
 
-        }
+        LinkedHashMap<Integer, Integer> lmap = new LinkedHashMap<>();
+        lmap.put(1, 1);
+        lmap.put(3, 1);
+        lmap.put(4, 1);
+        lmap.put(2, 1);
+        //{1=1, 3=1, 4=1, 2=1}
+        System.out.println(lmap);
 
+        TreeMap<Integer, Integer> tmap = new TreeMap<>();
+        tmap.put(1, 1);
+        tmap.put(2, 1);
+        tmap.put(4, 1);
+        tmap.put(3, 1);
+        System.out.println(tmap);
     }
 }
 
