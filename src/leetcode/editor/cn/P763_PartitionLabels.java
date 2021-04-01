@@ -39,6 +39,7 @@ public class P763_PartitionLabels{
     //测试代码
     public static void main(String[] args) {
         Solution solution = new P763_PartitionLabels().new Solution();
+
     }
         
     //力扣代码
