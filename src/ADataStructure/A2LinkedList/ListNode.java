@@ -8,6 +8,17 @@ package ADataStructure.A2LinkedList;
  * @Version 1.0
  **/
 public class ListNode {
+    /**
+     * Definition for singly-linked list.
+     * public class ListNode {
+     *     int val;
+     *     ListNode next;
+     *     ListNode(int x) {
+     *         val = x;
+     *         next = null;
+     *     }
+     * }
+     */
     public int val;        //节点值
     public ListNode next;  //后续节点引用
 
@@ -17,6 +28,12 @@ public class ListNode {
 
     public ListNode(int x) {
         val = x;
+        next = null;
+    }
+
+    public ListNode(int x, ListNode next) {
+        val = x;
+        this.next = next;
     }
 
     public int getVal() {

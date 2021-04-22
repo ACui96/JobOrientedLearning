@@ -47,7 +47,7 @@ package leetcode.editor.cn;
 
 //两数之和 II - 输入有序数组
 
-public class P167_TwoSumIiInputArrayIsSorted{
+public class P167_TwoSumIiInputArrayIsSorted {
     //测试代码
     public static void main(String[] args) {
         Solution solution = new P167_TwoSumIiInputArrayIsSorted().new Solution();
@@ -59,22 +59,23 @@ public class P167_TwoSumIiInputArrayIsSorted{
         }
 
     }
-        
+
     //力扣代码
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int[] twoSum(int[] numbers, int target) {
             int i = 0, j = numbers.length - 1;
+
             while (i < j) {
                 int sum = numbers[i] + numbers[j];
                 if (sum == target) {
-                    //下标从1开始
                     return new int[]{i + 1, j + 1};
                 } else if (sum < target) {
                     i++;
                 } else {
                     j--;
                 }
+
             }
             return null;
         }
