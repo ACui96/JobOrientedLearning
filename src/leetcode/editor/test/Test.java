@@ -66,6 +66,10 @@ public class Test {
         tmap.put(4, 1);
         tmap.put(3, 1);
         System.out.println(tmap);
+
+        String s = "java";
+        String s1 = s.replaceAll("java", "acui");
+        System.out.println(s1);
     }
 }
 
