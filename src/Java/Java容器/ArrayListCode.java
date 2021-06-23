@@ -1,4 +1,4 @@
-package JavaBasic.Java容器;
+package Java.Java容器;
 
 import java.util.ArrayList;
 import java.util.Collections;

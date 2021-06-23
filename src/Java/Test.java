@@ -1,4 +1,4 @@
-package JavaBasic;
+package Java;
 
 public class Test {
     static {

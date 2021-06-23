@@ -1,4 +1,4 @@
-package JavaBasic.Java基础.Object通用方法;
+package Java.Java基础.Object通用方法;
 
 import java.util.HashSet;
 

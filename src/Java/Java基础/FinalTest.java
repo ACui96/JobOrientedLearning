@@ -1,4 +1,4 @@
-package JavaBasic.Java基础;
+package Java.Java基础;
 
 /**
  * @author Acui

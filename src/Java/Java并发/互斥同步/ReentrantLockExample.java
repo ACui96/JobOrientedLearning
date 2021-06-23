@@ -1,4 +1,4 @@
-package JavaBasic.互斥同步;
+package Java.Java并发.互斥同步;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

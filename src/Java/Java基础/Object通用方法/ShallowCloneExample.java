@@ -1,25 +1,32 @@
-package JavaBasic;
+package Java.Java基础.Object通用方法;
 
+/**
+ * @author Acui
+ * @date 2021年06月18日 10:51
+ */
 public class ShallowCloneExample implements Cloneable {
-    int[] arr;
+    private int[] arr;
+
     public ShallowCloneExample() {
         arr = new int[10];
-        for (int i = 0; i < arr.length; ++i) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
         }
+    }
+
+    public int get(int index) {
+        return arr[index];
     }
 
     public void set(int index, int value) {
         arr[index] = value;
     }
 
-    public int get(int index) {
-        return arr[index];
-    }
     @Override
     protected ShallowCloneExample clone() throws CloneNotSupportedException {
         return (ShallowCloneExample) super.clone();
     }
+
 
     public static void main(String[] args) {
         ShallowCloneExample e1 = new ShallowCloneExample();
@@ -33,5 +40,3 @@ public class ShallowCloneExample implements Cloneable {
         System.out.println(e2.get(2));
     }
 }
-
-

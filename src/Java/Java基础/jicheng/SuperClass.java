@@ -1,4 +1,4 @@
-package JavaBasic.Java基础.jicheng;
+package Java.Java基础.jicheng;
 
 import java.util.ArrayList;
 import java.util.List;
