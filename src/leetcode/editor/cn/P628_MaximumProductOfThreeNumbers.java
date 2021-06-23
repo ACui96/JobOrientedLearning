@@ -39,6 +39,8 @@ package leetcode.editor.cn;
 
 //三个数的最大乘积
 
+import java.util.Arrays;
+
 public class P628_MaximumProductOfThreeNumbers{
 	 public static void main(String[] args) {
 	 	 //测试代码
@@ -48,9 +50,11 @@ public class P628_MaximumProductOfThreeNumbers{
 	//leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int maximumProduct(int[] nums) {
-        int ans = 0;
-        return ans;
+        Arrays.sort(nums);
+        int n = nums.length;
+        return Math.max(nums[0] * nums[1] * nums[n - 1], nums[n - 3] * nums[n - 2] * nums[n - 1]);
     }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
 

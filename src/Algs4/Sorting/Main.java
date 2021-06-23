@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Selection selection = new Selection();
-
+        QuickSort<Integer> quickSort = new QuickSort<Integer>();
 
     }
 }

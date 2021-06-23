@@ -82,14 +82,17 @@ class Solution {
         }
         Deque<Character> stack = new ArrayDeque<>();
         for(char c : s.toCharArray()) {
-            if(!stack.isEmpty()) {
-                char insideChar = stack.peek();
-                if((insideChar == '(' && c == ')') || (insideChar == '[' && c == ']') || (insideChar == '{' && c == '}')) {
+            if (!stack.isEmpty()) {
+                char insideChar = stack.peekLast();
+                if ((insideChar == '(' && c == ')') || (insideChar == '[' && c == ']') || (insideChar == '{' && c == '}')) {
                     stack.removeLast();
                 } else {
                     stack.addLast(c);
                 }
+            } else {
+                stack.addLast(c);
             }
+
         }
         return stack.isEmpty();
     }
