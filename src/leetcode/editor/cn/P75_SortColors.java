@@ -70,7 +70,8 @@ public class P75_SortColors {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public void sortColors(int[] nums) {
-            Arrays.sort(nums);
+            //三向快速切分快排
+
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

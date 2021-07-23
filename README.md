@@ -8,9 +8,9 @@
 - [x] Java 基础
 
 - [x] Java 容器
-- [ ] Java 并发 
-- [ ] Java 虚拟机
-- [ ] Java I/O
+- [x] Java 并发 
+- [x] Java 虚拟机
+- [x] Java I/O
 
 ### 计算机网络
 

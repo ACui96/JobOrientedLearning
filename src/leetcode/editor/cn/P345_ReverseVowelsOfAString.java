@@ -30,15 +30,17 @@ package leetcode.editor.cn;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Set;
 
 public class P345_ReverseVowelsOfAString{
 
     //测试代码
     public static void main(String[] args) {
-        Solution solution = new P345_ReverseVowelsOfAString().new Solution();
+        Solution1 solution = new P345_ReverseVowelsOfAString().new Solution1();
         String s = "hello";
         String ret = solution.reverseVowels(s);
         System.out.println(ret);
+
     }
 
 
@@ -67,6 +69,28 @@ public class P345_ReverseVowelsOfAString{
             return new String(ret);
         }
     }
+    private  final static Set<Character> set = new HashSet<>( Arrays.asList('a', 'e', 'i','o', 'u', 'A', 'E', 'I', 'O', 'U'));
+    class Solution1 {
+        public String reverseVowels(String s) {
+            if (s == null) return null;
+            char[] chs = s.toCharArray();
+            int i = 0, j = chs.length - 1;
+            while (i < j) {
+                while (!set.contains(chs[i]) && i < chs.length - 1) i++;
+                while (!set.contains(chs[j]) && j > 0) j--;
+                if(i < j) {
+                    char tmp = chs[i];
+                    chs[i] = chs[j];
+                    chs[j] = tmp;
+                    i++;
+                    j--;
+                }
+
+            }
+            return new String(chs);
+        }
+    }
 //leetcode submit region end(Prohibit modification and deletion)
+
 
 }
