@@ -1,24 +1,25 @@
 package testApi;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
-/**
- * @author Acui
- * @date 2022年03月28日 20:06
- */
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String[] s = sc.nextLine().split(" ");
-        int[] h = new int[s.length];
-        for (int i = 0; i < s.length; i++) {
-            h[i] = Integer.parseInt(s[i]);
-        }
-        for (int i : h) {
-            System.out.print(i + " ");
+//        String str = "qywyery23tdd";
+        String str = "have you ever go shopping and";
+        Map<Character, Integer> cache = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            if (c == ' ') continue;
+            cache.put(c, cache.getOrDefault(c, 0) + 1);
+            if (cache.get(c) == 3) {
+                System.out.println(c);
+                break;
+            }
+
         }
     }
-}
 
+    private static void func() {
+
+    }
+}
