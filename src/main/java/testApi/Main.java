@@ -11,13 +11,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] s = sc.nextLine().split(" ");
-        int[] h = new int[s.length];
-        for (int i = 0; i < s.length; i++) {
-            h[i] = Integer.parseInt(s[i]);
-        }
-        for (int i : h) {
-            System.out.print(i + " ");
+//        while (sc.hasNext()) {
+//            int a = sc.nextInt();
+//            int b = sc.nextInt();
+//            System.out.println(a + b);
+//        }
+        int a, b;
+        while (sc.hasNextLine()) {
+            String s = sc.nextLine();
+            String[] split = s.split(" ");
+            a = Integer.parseInt(split[0]);
+            b = Integer.parseInt(split[1]);
+            System.out.println(a + b);
         }
     }
 }

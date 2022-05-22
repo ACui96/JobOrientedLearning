@@ -1,5 +1,7 @@
 package 算法.基础.排序;
 
+import java.util.Arrays;
+
 /**
  * @author Acui
  * @date 2021年06月29日 17:01
@@ -19,6 +21,12 @@ public class Selection<T extends Comparable<T>> extends Sort<T> {
                 }
             }
             swap(nums, i, min);
+            System.out.println(Arrays.asList(nums));
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(7.2%10);
+        System.out.println(7.2222%10);
     }
 }
