@@ -47,6 +47,9 @@
 
 package leetcode.editor.cn;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class P785_IsGraphBipartite {
     public static void main(String[] args) {
         Solution solution = new P785_IsGraphBipartite ().new Solution();
@@ -56,8 +59,29 @@ public class P785_IsGraphBipartite {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean isBipartite(int[][] graph) {
-
-            return false;
+            int m = graph.length;
+            int[] visit = new int[m];
+            Queue<Integer> queue = new LinkedList<>();
+            for (int i = 0; i < m; i++) {
+                if (visit[i] != 0) {
+                    continue;
+                }
+                visit[i] = 1;
+                queue.offer(i);
+                while (!queue.isEmpty()) {
+                    int v = queue.poll();
+                    for (int w : graph[v]) {
+                        if (visit[w] == visit[v]) {
+                            return false;
+                        }
+                        if (visit[w] == 0) {
+                            visit[w] = -visit[v];
+                            queue.offer(w);
+                        }
+                    }
+                }
+            }
+            return true;
         }
     }
     //leetcode submit region end(Prohibit modification and deletion)

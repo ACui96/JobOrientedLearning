@@ -1,0 +1,23 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x < 0){
+            return false;
+        }else if(x % 10 == 0 && x != 0){
+            return false;
+        }
+        
+
+        int rev = 0;
+        int pop = 0;
+        while(x > rev){
+            pop = x % 10;
+            x /= 10;
+            rev = rev * 10 + pop;
+        }
+        return rev == x || rev / 10 == x;
+        
+        
+    }
+}
+//runtime:9 ms
+//memory:37.8 MB

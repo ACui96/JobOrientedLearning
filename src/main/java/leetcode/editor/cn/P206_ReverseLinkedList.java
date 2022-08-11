@@ -20,6 +20,15 @@ public class P206_ReverseLinkedList {
     public static void main(String[] args) {
         Solution solution = new P206_ReverseLinkedList ().new Solution();
         // TO TEST
+        ListNode someNode = new ListNode();
+
+
+        ListNode head = someNode.build(new int[]{1, 2, 3, 4, 5});
+        while (head != null) {
+            System.out.println(head.val);
+        }
+
+
     }
     //leetcode submit region begin(Prohibit modification and deletion)
     /**

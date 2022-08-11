@@ -51,4 +51,19 @@ public class ListNode {
     public void setNext(ListNode next) {
         this.next = next;
     }
+
+    /**
+     * @param a array of int
+     * @return head of linkedList
+     */
+    public ListNode build(int[] a) {
+        ListNode head = new ListNode(1);
+        ListNode cur = head;
+        for (int i : a) {
+            ListNode node = new ListNode(i);
+            cur.next = node;
+            cur = node;
+        }
+        return head;
+    }
 }
